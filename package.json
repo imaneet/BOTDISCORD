@@ -17,16 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "@sindresorhus/is": "^0.11.0",
-    "bufferutil": "^4.0.0",
     "discord.js": "^11.4.2",
-    "got": "^9.1.0",
-    "imgur-search": "^1.0.1",
-    "mimic-response": "^1.0.1",
-    "nekos.life": "^1.1.4",
-    "random-boobs": "^1.1.0",
-    "random-butt": "^1.0.0",
-    "random-vagina": "^1.0.0",
-    "save": "^2.3.2",
-    "symbol-observable": "^1.2.0"
+    "nekos.life": "^1.1.4"
   }
 }

@@ -8,21 +8,26 @@ const neko = new client();
 
 bot.on('message', function(message){
     if(message.channel.id === ('481901539456450579'))
-        switch(message.content.startsWith('@NSFW')){
-            case message.content === '@NSFW tits'
-                : message.reply(neko.getNSFWBoobs().content);
-                break
-            case message.content === '@NSFW ass'
-                : message.reply(neko.getNSFWAnal().content);
-                break
-            case message.content === '@NSFW pussy'
-                : message.reply(neko.getNSFWPussy().content);
-                break
-
-
-            default : message.reply("Not found what you asked for !")
-            break;
-        }       
+        if(message.content.startsWith('!NSFW')){
+            switch(message.content){
+                case '!NSFW tits':
+                    neko.getNSFWBoobs().then((boobies) => {
+                        message.reply(boobies.url)
+                    })
+                    break;
+                case '!NSFW ass':
+                    neko.getNSFWAnal().then((asses) => {
+                        message.reply(asses.url)
+                    })
+                break;
+                case '!NSFW pussy':
+                    neko.getNSFWPussy().then((pussies) => {
+                        message.reply(pussies.url)
+                    })
+                break;
+                
+            }
+        }     
     }
 )
 
